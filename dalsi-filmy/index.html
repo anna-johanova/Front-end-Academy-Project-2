@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Netflix</title>
+    <link rel="icon" href="../img/favicon.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <a href="/" class="homepage-link">
+        <button class="homepage-button">Úvodní strana</button>
+      </a>
+    </header>
+    <!-- SELECT OPTION -->
+    <div class="selector">
+      <select id="select-movie">
+        <option value="" disabled selected>Vyberte možnosti</option>
+        <option value="Mission">Mission</option>
+        <option value="Eat">Eat</option>
+        <option value="Avenger">Avenger</option>
+        <option value="New">New</option>
+      </select>
+    </div>
+    <!--  MOVIE SECTION -->
+    <section id="movie-cards"></section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

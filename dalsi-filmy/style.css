@@ -1,0 +1,117 @@
+/* 
+Project: Netflix stránky
+Autor: annajohanova_75116
+E-mail: a.johanova@seznam.cz
+Popis: Vytvoření stránky, která bude co nejvíce podobná stránce ze zadání
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --background-color: #000000;
+  --buttons-background-color: #d61c1c;
+  --text-color-light: #fff;
+  --border-color: #808080;
+  --nav-height: 55px;
+  --content-width: 70%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* BODY SECTION  */
+body,
+html {
+  font-family: "Book Antiqua", "Georgia", "Times New Roman", serif; /*Nastavení výchozího fontu Book Antiqua*/
+  background-color: var(--background-color);
+}
+
+/* HEADER SECTION */
+/* Hlavička – tlačítko zarovnané na střed */
+.header {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 0;
+}
+
+/* Styl tlačítka "Úvodní strana" */
+.homepage-button {
+  background-color: var(--buttons-background-color);
+  color: var(--text-color-light);
+  border: none;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Pro obrazovky širší než 768px */
+@media (min-width: 768px) {
+  .homepage-button {
+    font-size: 1.1rem;
+  }
+}
+
+/* Hover pro tlačítko */
+.homepage-button:hover {
+  background-color: #b30000;
+  cursor: pointer;
+}
+
+.selector {
+  display: flex;
+  justify-content: center;
+}
+
+/* SELECT OPTION SECTION */
+#select-movie {
+  border: 2px solid var(--buttons-background-color);
+  background-color: var(--background-color);
+  color: var(--text-color-light);
+  padding: 5px;
+}
+
+#select-movie:hover {
+  cursor: pointer;
+}
+
+/* Sekce, kam se načítají obrázky */
+#movie-cards {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* zarovnání na střed */
+  gap: 15px;
+  padding: 20px;
+}
+
+/* Styl jednotlivých obrázků filmu */
+.movie-image {
+  width: 140px;
+  transform: rotate(5deg); /* mírné natočení */
+  transition: transform 0.3s ease;
+}
+
+/* Při hoveru se obrázek narovná */
+.movie-image:hover {
+  transform: rotate(0deg); /* narovnání po najetí */
+}
+
+/* stylování pro zařízení s šířkou obrazovky alespoň 600px */
+@media (min-width: 600px) {
+  .movie-image {
+    width: 170px;
+  }
+}
+
+/* stylování pro zařízení s šířkou obrazovky alespoň 768px */
+@media (min-width: 768px) {
+  .movie-image {
+    width: 200px;
+  }
+}
