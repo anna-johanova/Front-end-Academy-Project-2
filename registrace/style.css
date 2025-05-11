@@ -1,0 +1,179 @@
+/* 
+Project: Netflix stránky
+Autor: annajohanova_75116
+E-mail: a.johanova@seznam.cz
+Popis: Vytvoření stránky, která bude co nejvíce podobná stránce ze zadání
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --background-color: #000000;
+  --buttons-background-color: #d61c1c;
+  --text-color-light: #fff;
+  --border-color: #808080;
+  --nav-height: 55px;
+  --content-width: 70%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* BODY SECTION  */
+body {
+  font-family: "Book Antiqua", "Georgia", "Times New Roman", serif; /*Nastavení výchozího fontu Book Antiqua*/
+  background-color: var(--background-color);
+}
+
+/* HEADER SECTION */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 30px;
+  background-color: var(--background-color);
+}
+
+/* logo */
+.logo {
+  height: 40px;
+}
+
+/* tlačítko Homepage*/
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+/* stylování tlačítka */
+.homepage-button {
+  background-color: var(--buttons-background-color);
+  color: var(--text-color-light);
+  border: none;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Hover pro tlačítko */
+.homepage-button:hover {
+  background-color: #b30000;
+  cursor: pointer;
+}
+
+@media (max-width: 300px) {
+  /*Do max. šířky displeje 300px se logo a tlačítko řadí pod sebe*/
+  .header {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .homepage-button {
+    font-size: 1.1rem;
+  }
+}
+
+/* FORM SECTION */
+/* stylování formuláře */
+.form {
+  height: calc(100vh - var(--nav-height));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* stylování položek formuláře */
+.firstName,
+.lastName,
+.email,
+.password {
+  width: 55vw;
+  background-color: transparent;
+  border: none;
+  border: 2px solid var(--border-color);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 10px;
+  outline: none;
+  text-align: left;
+  font-size: 0.5rem;
+}
+
+/*stylování tlačítka pro potvrzení formuláře*/
+form button {
+  background-color: var(--buttons-background-color);
+  color: var(--text-color-light);
+  width: 55vw;
+  font-size: 0.8rem;
+  border: none;
+  padding: 7px 10px;
+  margin-top: 10px;
+}
+/* hover pro tlačítko formuláře */
+form button:hover {
+  background-color: #b30000;
+  cursor: pointer;
+}
+
+/* nastavení barvy pro placeholdery ve formuláři */
+input::placeholder {
+  color: var(--border-color);
+}
+
+/* změna barvy textu pro uživatelskývstup */
+input {
+  transition: border-color 0.1s ease;
+  color: white;
+}
+
+/* stylování pro zařízení s šířkou obrazovky nejvíce 300px */
+@media (max-width: 300px) {
+  .firstName,
+  .lastName,
+  .email,
+  .password {
+    width: 55vw;
+    font-size: 0.5rem;
+  }
+  .form button {
+    font-size: 0.7rem;
+    width: 55vw;
+  }
+}
+
+/* stylování pro zařízení s šířkou obrazovky alespoň 600px */
+@media (min-width: 600px) {
+  .firstName,
+  .lastName,
+  .email,
+  .password {
+    width: 30vw;
+    font-size: 0.5rem;
+  }
+  .form button {
+    font-size: 0.9rem;
+    width: 30vw;
+  }
+}
+
+/* stylování pro zařízení s šířkou obrazovky alespoň 768px */
+@media (min-width: 768px) {
+  .firstName,
+  .lastName,
+  .email,
+  .password {
+    width: 30vw;
+    font-size: 0.7rem;
+  }
+  .form button {
+    font-size: 1.1rem;
+    width: 30vw;
+  }
+}
